@@ -1,0 +1,15 @@
+ProductTitle:
+    css: 'h1.a-size-large span.a-size-large'
+    type: Text
+OriginalPrice:
+    css: span.priceBlockStrikePriceString
+    type: Text
+SalePrice:
+    css: 'td.a-span12 span.a-size-medium'
+    type: Text
+Availability:
+    css: 'div.centerColAlign div.a-section.a-spacing-none span.a-size-medium'
+    type: Text
+#Discount:
+    #css: td.a-span12.a-color-price
+    #type: Text
