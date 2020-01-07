@@ -22,10 +22,13 @@ if __name__ == "__main__":
   # Create an Extractor by reading from the YAML file
   e = Extractor.from_yaml_file('selectors.yml')
 
-  user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246'
+  #change user agent if amazon detect you as a robot
+  #Mozilla/5.0 (Windows NT 10.0; Win64; x64) 
+  user_agent = 'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246'
   headers = {'User-Agent': user_agent}
 
   r = requests.get(args.url, headers=headers)
+  #print(r.text) debug
   # Pass the HTML of the page and create 
   data = e.extract(r.text)
   # Print the data for debug
@@ -40,7 +43,7 @@ if __name__ == "__main__":
     notAvailable = True
     discountPercentage = 0
   else:
-    salePrice = locale.atof(money1.strip("€"))
+    salePrice = locale.atof(money1.strip("€")) #strip() remove characters from the string #locale.atof() convert a string in float
     print ("Sale Price: ", salePrice)
 
     #calculate original price

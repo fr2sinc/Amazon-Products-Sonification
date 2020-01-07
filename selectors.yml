@@ -10,6 +10,4 @@ SalePrice:
 Availability:
     css: 'div.centerColAlign div.a-section.a-spacing-none span.a-size-medium'
     type: Text
-#Discount:
-    #css: td.a-span12.a-color-price
-    #type: Text
+
